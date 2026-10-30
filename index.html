@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo HTML, CSS e DOM</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #51C6FF;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #76AC7B;
+            padding: 15px;
+        }
+
+        main {
+            background-color: white;
+            padding: 25px;
+            min-height: 200px;
+        }
+
+        footer {
+            background-color: gray;
+            padding: 40px;
+        }
+
+        .bloco-footer {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        #bloco1 {
+            background-color: lightcoral;
+        }
+
+        #bloco2 {
+            background-color: lightgreen;
+        }
+
+        #bloco3 {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Feira das nações</h1>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+    </main>
+
+    <footer>
+        <div class="bloco-footer" id="bloco1">
+            <p>Portugal: simplesmente meteram um cr7 de papelão na feira, muito daora</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco2">
+            <p>Japão: Além de representar bem a cultura, as explicações estavam impecaveis</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco3">
+            <p>Estados unidos: Estava tudo lindo, de longe a que mais levou tempo para fazer. Foi incrivel</p>
+        </div>
+    </footer>
+
+    <script>
+        // Selecionar o elemento main
+        const main = document.getElementById("conteudo");
+
+        // CRIAR UM TÍTULO
+        const titulo = document.createElement("h2");
+        titulo.textContent = "Conheça mais sobre as melhores carracas da nossa feira!";
+        main.appendChild(titulo);
+
+        // CRIAR UM PARÁGRAFO
+        const paragrafo = document.createElement("p");
+        paragrafo.textContent = "Este é o meu top 3 (minha opinião):";
+        main.appendChild(paragrafo);
+
+        // CRIAR UMA LISTA ORDENADA
+        const lista = document.createElement("ol");
+
+        // Primeiro item
+        const item1 = document.createElement("li");
+        item1.textContent = "Portugal";
+        lista.appendChild(item1);
+
+        // Segundo item
+        const item2 = document.createElement("li");
+        item2.textContent = "Japão";
+        lista.appendChild(item2);
+
+        // Terceiro item
+        const item3 = document.createElement("li");
+        item3.textContent = "Estados unidos";
+        lista.appendChild(item3);
+
+        // Adicionar a lista ao main
+        main.appendChild(lista);
+    </script>
+
+</body>
+</html>
+
